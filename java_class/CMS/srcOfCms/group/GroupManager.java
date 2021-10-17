@@ -1,8 +1,9 @@
 package group;
 
 import java.util.Scanner;
+import show.*;
 
-public class GroupManager {
+public class GroupManager implements Showable {
 	private Group[] garr;
 	private static int index;
 	Scanner sc;
@@ -43,7 +44,7 @@ public class GroupManager {
 		 System.out.println(">> " + title +  " : 그룹 추가 성공...");
 	 }
 	 
-	 public void showGroup()
+	 public void showAll()
 	 {
 		 System.out.println("-------------------");
 		 System.out.println("Group ID    Group name");
@@ -61,7 +62,7 @@ public class GroupManager {
 	 {
 		 if(id == 1)
 		 {
-			 return garr[1].getGroupName();
+			 return garr[0].getGroupName();
 		 }else
 		 {
 		 return garr[id-1].getGroupName();
